@@ -1,62 +1,46 @@
-select
-   *
-from
-   data_sci.employees;
 
 
 select
-   *
-from
+   last_name, department_id, salary
+from 
    data_sci.employees
-join
-   data_sci.company_regions
-on
-   employees.region_id = company_regions.id
-
-
-
-
-select
-   e.*, cr.region_name, cr.country_name
-from
-   data_sci.employees e
-join
-   data_sci.company_regions cr
-on
-   e.region_id = cr.id
-select
-   e.*, cr.region_name, cr.country_name
-from
-   data_sci.employees e
-join
-   data_sci.company_regions cr
-on
-   e.region_id = cr.id
 where
-   cr.country_name = 'canada';
+   last_name = 'boyd';
+
+
 
 
 select
-   e.last_name,
-   e.email,
-   e.start_date,
-   e.salary,
-   e.job_title,
-   cr.region_name, 
-   cr.country_name
-from
-   data_sci.employees e
-join
-   data_sci.company_regions cr
-on
-   e.region_id = cr.id
-select
-   e.*, cr.region_name, cr.country_name
-from
-   data_sci.employees e
-join
-   data_sci.company_regions cr
-on
-   e.region_id = cr.id
+   last_name, department_id, salary
+from 
+   data_sci.employees
 where
-   cr.country_name = 'canada'
+   last_name like 'b%';
+
+
+ select
+   last_name, department_id, salary
+from 
+   data_sci.employees
+where
+   last_name like 'b%d';
+
+
+
+ select
+   last_name, department_id, salary
+from 
+   data_sci.employees
+where
+   last_name like 'bo%'
+or 
+   salary > 100000;
+
+ select
+    sum(salary)
+ from
+     data_sci.employees
+ where
+  	 salary > 100000
+ group by
+    department_id;
