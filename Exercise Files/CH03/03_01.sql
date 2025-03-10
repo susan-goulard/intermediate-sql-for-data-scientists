@@ -1,122 +1,95 @@
 ﻿select
   *
 from
-  data_sci.company_departments
-
-
-
+  data_sci.company_departments;
 
 
 
 select
   upper(department_name)
 from
-  data_sci.company_departments
-
-
+  data_sci.company_departments;
 
 
 select
   initcap(department_name)
 from
-  data_sci.company_departments
-
-
+  data_sci.company_departments;
 
 
 select
   lower(initcap(department_name))
 from
-  data_sci.company_departments
-
-
-
-
-
-
-select
-  ‘ kelly’
-
-
-select
-  ‘ kelly’ = ‘kelly’
+  data_sci.company_departments;
 
 
 
 
 select
-  ltrim(‘ kelly’)
+  ' kelly';
 
+select
+  ' kelly' = 'kelly';
 
 
 
 select
-  ltrim(‘ kelly’) = ‘kelly’
-
-
-
-
-select
-  ltrim(‘ kelly  ’) = ‘kelly’
-
-
-
+  ltrim(' kelly');
 
 
 
 select
-  rtrim(ltrim(‘ kelly  ’)) = ‘kelly’
+  ltrim(' kelly') = 'kelly';
 
 
+
+select
+  ltrim(' kelly  ') = 'kelly';
+
+
+
+select
+  rtrim(ltrim(' kelly  ')) = 'kelly';
 
 
 select
    job_title || last_name
 from
-  data_sci.employees
+  data_sci.employees;
 
 
 select
-   job_title || ‘-’ || last_name
+   job_title || '-' || last_name
 from
-  data_sci.employees
-
-
-
-
+  data_sci.employees;
 
 
 select
-   job_title || ‘-’ || null
+   job_title || '-' || null
 from
-  data_sci.employees
-
-
+  data_sci.employees;
 
 
 select
-   concat(job_title, ‘-’,last_name)
+   concat(job_title, '-',last_name)
 from
-  data_sci.employees
-
-
-
+  data_sci.employees;
 
 
 
 select
-   concat(job_title, ‘-’,null)
+   concat(job_title, '-',null)
 from
-  data_sci.employees
+  data_sci.employees;
 
 
 select
-   concat_ws(‘-’, job_title, last_name)
+   concat_ws('-', job_title, last_name)
 from
-  data_sci.employees
+  data_sci.employees;
 
 
 select
-   concat_ws(‘-’, job_title, last_name,email)
+   concat_ws('-', job_title, last_name,email)
 from
-  data_sci.employees
+  data_sci.employees;

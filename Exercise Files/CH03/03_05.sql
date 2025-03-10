@@ -1,56 +1,39 @@
-﻿create extension fuzzystrmatch;
-
+﻿create extension if not exists fuzzystrmatch;
 
 create extension if not exists fuzzystrmatch;
 
-
 select
-   soundex(‘Postgres’)
-
-
-
-
+   soundex('Postgres');
 
 
 select
-   soundex(‘Postgres’),
-   soundex(‘Postgresss’)
-
-
-
-
+   soundex('Postgres'),
+   soundex('Postgresss');
 
 
 select
-   soundex(‘Postgres’),
-   soundex(‘Postgresss’),
-   (‘Postgres’ = ‘Postgresss’),
-   soundex(‘Postgres’) = soundex(‘Postgresss’)
-
-
-
-
-select
-   difference(‘Postgres’,’Postgresss’)
-
-
+   soundex('Postgres'),
+   soundex('Postgresss'),
+   ('Postgres' = 'Postgresss'),
+   soundex('Postgres') = soundex('Postgresss');
 
 
 select
-   soundex(‘Postgres’),
-   soudnex(‘Kostgres’),
-   difference(‘Postgres’,’Kostgres’)
-
-
+   difference('Postgres','Postgresss');
 
 
 select
-    levenshtein(‘Postgres’,’Postgres’)
+   soundex('Postgres'),
+   soundex('Kostgres'),
+   difference('Postgres','Kostgres');
+
+select
+    levenshtein('Postgres','Postgres');
 
 
 select
-    levenshtein(‘Postgres’,’Kostgres’)
+    levenshtein('Postgres','Kostgres');
 
 
 select
-    levenshtein(‘Postgres’,mySQL’)
+    levenshtein('Postgres','mySQL');
